@@ -1,0 +1,11 @@
+<div class="container">
+    <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pills">
+            <li (click)="changeSelectedHeader('Home')" routerLink="/" class="nav-item"><a class="nav-link " [ngClass]="{'active': selectedHeader == 'Home'}" aria-current="page">Home</a></li>
+            <li (click)="changeSelectedHeader('Product')"  routerLink="/product" class="nav-item"><a class="nav-link" [ngClass]="{'active': selectedHeader == 'Product'}">Product</a></li>
+            <li (click)="changeSelectedHeader('Register')"  routerLink="/register" class="nav-item"><a class="nav-link" [ngClass]="{'active': selectedHeader == 'Register'}">Register</a></li>
+            <li (click)="changeSelectedHeader('FAQs')"  class="nav-item"><a class="nav-link" [ngClass]="{'active': selectedHeader == 'FAQs'}">FAQs</a></li>
+            <li (click)="changeSelectedHeader('About')"  class="nav-item"><a class="nav-link" [ngClass]="{'active': selectedHeader == 'About'}">About</a></li>
+        </ul>
+    </header>
+</div>

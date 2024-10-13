@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+        </div>
+        <div class="col-6">
+            <label class="form-label" for="txt-product-name">Product Name</label>
+            <input class="form-control" id="txt-product-name" [(ngModel)] = "product.name" type="text">
+            <label class="form-label mt-2" for="txt-product-description">Product Description</label>
+            <input class="form-control" id="txt-product-description" [(ngModel)] = "product.description" type="text">
+
+            <!-------------<structural directive - angular>---------------- -->
+            <button *ngIf="product.description" (click) = "register()" class="btn btn-primary mt-2">Register</button>
+
+            <!-------------<property binding - angular>---------------- -->
+            <button [disabled]="!product.description" (click) = "register()" class="btn btn-primary mt-2">Register</button>
+        </div>
+    </div>
+</div>
